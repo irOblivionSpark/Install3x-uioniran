@@ -1,4 +1,4 @@
-# Install3x-uioniran
+# Fix Installer Of 3X-Ui
 ## Install 3X-Ui On Iran Server
 
 ```
