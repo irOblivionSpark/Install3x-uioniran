@@ -142,7 +142,7 @@ install_x-ui() {
     cd /usr/local/
     tag_version="v2.6.0" 
     echo -e "Beginning to install x-ui ${tag_version}"
-    url="https://github.com/MHSanaei/3x-ui/releases/download/${tag_version}/x-ui-linux-$(arch).tar.gz"
+    url="http://178.236.35.4/releases/${tag_version}/x-ui-linux-$(arch).tar.gz"
     wget -N -O /usr/local/x-ui-linux-$(arch).tar.gz ${url}
     if [[ $? -ne 0 ]]; then
         echo -e "${red}Download x-ui ${tag_version} failed, please check if the version exists or your server can access GitHub ${plain}"
@@ -168,7 +168,7 @@ install_x-ui() {
 
     chmod +x x-ui bin/xray-linux-$(arch)
     cp -f x-ui.service /etc/systemd/system/
-    wget -O /usr/bin/x-ui https://raw.githubusercontent.com/MHSanaei/3x-ui/main/x-ui.sh
+    wget -O /usr/bin/x-ui http://178.236.35.4/3x-ui/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
     config_after_install
